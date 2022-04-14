@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "methodist-member",
+    "main": "methodist-member"
+  },
+  "targets": {}
+}
