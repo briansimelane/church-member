@@ -15,13 +15,26 @@ const store = useMemberStore()
       { id: '03', name: 'Employment / Schooling', status: 'complete' },
       { id: '04', name: 'Formal Education', status: 'complete' },
       { id: '05', name: 'Skills & Knowledge', status: 'current' },
-      { id: '06', name: 'Next of Kin', status: 'upcoming' }      
+      { id: '06', name: 'Giving', status: 'upcoming' },
+      { id: '07', name: 'Next of Kin', status: 'upcoming' }      
     ]
                 })
     store.$patch({ navigationLog: 5})
 }
 const goBack = () => {
   store.$patch({ navigationLog: 3})
+
+  topnav.$patch({
+    steps: [
+      { id: '01', name: 'Personal Information', status: 'complete' },
+      { id: '02', name: 'Organisational Membership', status: 'complete' },
+      { id: '03', name: 'Employment / Schooling', status: 'current' },
+      { id: '04', name: 'Formal Education', status: 'upcoming' },
+      { id: '05', name: 'Skills & Knowledge', status: 'upcoming' },
+      { id: '06', name: 'Giving', status: 'upcoming' },
+      { id: '07', name: 'Next of Kin', status: 'upcoming' }     
+    ]
+                })
 }
  
 </script>

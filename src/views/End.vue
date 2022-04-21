@@ -18,7 +18,8 @@ const store = useMemberStore()
       { id: '03', name: 'Employment / Schooling', status: 'upcoming' },
       { id: '04', name: 'Formal Education', status: 'upcoming' },
       { id: '05', name: 'Skills & Knowledge', status: 'upcoming' },
-      { id: '06', name: 'Next of Kin', status: 'upcoming' }      
+      { id: '06', name: 'Giving', status: 'upcoming' },
+      { id: '07', name: 'Next of Kin', status: 'upcoming' }     
     ]
                 })
                 

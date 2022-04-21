@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, onSnapshot, query, where } from 'firebase/firestore'
 import { getStorage } from "firebase/storage"
+import { getAuth } from "firebase/auth"
 import { ref } from 'vue'
 
 // Your web app's Firebase configuration
@@ -20,6 +21,7 @@ const firebaseApp = initializeApp(firebaseConfig)
 
 // initialise services
 const db = getFirestore()
+const auth = getAuth()
 const storage = getStorage(firebaseApp);
 
 
@@ -40,5 +42,5 @@ onSnapshot(colRef, (snapshot) => {
 })
 
 export {
-    db, colRef, membersData, storage
+    db, colRef, membersData, storage, auth
 }

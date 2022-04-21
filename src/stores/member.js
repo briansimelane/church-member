@@ -87,6 +87,17 @@ export const useMemberStore = defineStore({
         otherField: '',
         otherSkill: ''
       },
+      plannedGiving: {
+        tithe: false,
+        titheFrequency: '',
+        titheAmountRange: '',
+        pledge: false,
+        pledgeFrequency: '',
+        pledgeAmountRange: '',
+        donation: false,
+        donationFrequency: '',
+        donationAmountRange: ''
+      },
       nextOfKin: {
         name: '',
         surname: '',
@@ -94,7 +105,9 @@ export const useMemberStore = defineStore({
       }
     },
     navigationLog: 0,
-    loading: false
+    loading: false,
+    navigationUser: 0,
+    user: false
   }),
   getters: {
     

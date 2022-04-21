@@ -13,6 +13,7 @@ import Section3 from './Section3.vue';
 import Section4a from './Section4a.vue';
 import Section4b from './Section4b.vue';
 import Section5 from './Section5.vue';
+import Section6 from './Section6.vue';
 import End from './End.vue';
 import InfoGathered from '@/components/InfoGathered.vue'
 
@@ -125,11 +126,14 @@ const carouselSlides = ["@/assets/images/bg-1.png", "bg-2", "bg-3", "bg-4", "bg-
 <!-- Section 4a: Field of Study -->
 <Section4b v-if="store.navigationLog == 5"></Section4b>
 
-<!-- Section 5: Next of kin -->
+<!-- Section 5: Giving -->
 <Section5 v-if="store.navigationLog == 6"></Section5>
 
+<!-- Section 6: Next of kin -->
+<Section6 v-if="store.navigationLog == 7"></Section6>
+
 <!-- End Section -->
-    <End v-if="store.navigationLog == 7"></End>
+    <End v-if="store.navigationLog == 8"></End>
 
 </div> 
 </template>
