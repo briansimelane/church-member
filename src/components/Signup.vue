@@ -2,9 +2,10 @@
 import { ref, watch } from 'vue'
 import { useMemberStore } from '@/stores/member'
 import { usechurchstructureStore } from '@/stores/churchStructure'
-import { auth } from '@/firebase/config'
+import { auth, db } from '@/firebase/config'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { useRouter } from 'vue-router'
+import { collection, addDoc, doc, setDoc  } from 'firebase/firestore'
 
 
 const store = useMemberStore()
@@ -40,6 +41,7 @@ watch([districtAlias, circuitAlias], () => {
 
 })
 
+const loading = ref(false)
 
 const gotoSignIn = () => {
    store.$patch({ 
@@ -47,9 +49,37 @@ const gotoSignIn = () => {
 }
 
 const registerUser = () => {
+    loading.value = true
     createUserWithEmailAndPassword(auth, userEmail.value, userPassword.value)
     .then((data) => {
         console.log("Successfully registered!")
+
+      setDoc (doc(db, 'users', data.user.uid), {
+        fullName: userName.value,
+        email: userEmail.value,
+        role: userRole.value.name,
+        district: districtAlias.value.alias,
+        circuit: circuitAlias.value.alias,
+        society: societyAlias.value.alias
+      });
+
+    loading.value = false
+
+   /*      const colRef = collection(db, 'users')
+
+       addDoc(colRef, {
+        userID: data.user.uid,
+        fullName: userName.value,
+        email: userEmail.value,
+        role: userRole.value.name,
+        district: districtAlias.value.alias,
+        circuit: circuitAlias.value.alias,
+        society: societyAlias.value.alias
+
+            }).then(() => {
+        
+      }) */
+
         errorRef.value = false
         errorMsg.value = ''
         router.push('/admin')
@@ -59,6 +89,10 @@ const registerUser = () => {
         errorRef.value = true
         errorMsg.value = error.message
     })
+}
+
+const viewUser = () => {
+
 }
 
 </script>
@@ -154,8 +188,12 @@ const registerUser = () => {
                 </select>
             </div>
 
-            <div>
-                <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"> Register </button>
+            <div v-if="!loading.value">
+                <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"> Register </button>
+            </div>
+
+            <div v-if="loading.value">
+                <span class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"> loading... </span>
             </div>
 
             <div v-if="errorRef"> 
@@ -163,7 +201,13 @@ const registerUser = () => {
             </div>
         </form>
 
+            
 
+
+    </div>
+
+    <div class="mt-2 md:mt-6">
+    <router-link class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gra-500" to="/"> Enter member data instead </router-link>
     </div>
 
 </div>

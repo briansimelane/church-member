@@ -64,6 +64,11 @@ const router = createRouter({
       path: '/end',
       name: 'end',
       component: () => import('../views/End.vue')
+    },
+    {
+      path: '/memberView',
+      name: 'memberView',
+      component: () => import('../views/memberView.vue')
     }
   ]
 })
@@ -86,7 +91,7 @@ router.beforeEach(async(to, from, next) => {
     if (await getCurrentUser()) {
       next()
     } else {
-      alert("You do not have access")
+      alert("You need to login to access this area")
       next("/admin-members")
     }
   } else {

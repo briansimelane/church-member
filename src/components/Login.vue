@@ -21,7 +21,7 @@ const userPassword = ref('')
 const signUserIn = () => {
     signInWithEmailAndPassword(auth, userEmail.value, userPassword.value)
     .then((data) => {
-        console.log("Successfully logged in")
+        console.log("Successfully logged in", data.user.uid)
         errorRef.value = false
         errorMsg.value = ''
         router.push('/admin')
@@ -90,7 +90,7 @@ const signUserIn = () => {
             </div>
 
             <div class="mt-2 md:mt-6">
-            <router-link class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500" to="/"> Enter member data instead </router-link>
+            <router-link class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gra-500" to="/"> Enter member data instead </router-link>
             </div>
 
         </div>

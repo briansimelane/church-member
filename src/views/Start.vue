@@ -82,7 +82,7 @@ const carouselSlides = ["@/assets/images/bg-1.png", "bg-2", "bg-3", "bg-4", "bg-
             
             </div>
 
-            <div>
+            <div class="mb-5">
                     <InfoGathered></InfoGathered>
                 </div>
         </div>

@@ -112,19 +112,27 @@ const goBack = () => {
                     <label for="evangelism" class="font-medium text-gray-700">Order of Evangelism</label>
                   </div>
                 </div>
+                 <div class="relative flex items-start">
+                  <div class="flex items-center h-5">
+                    <input id="wesley-guild" aria-describedby="wesley-guild" name="wesley-guild" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" v-model.lazy="store.member.organisations.wesleyGuild" />
+                  </div>
+                  <div class="ml-3 text-sm">
+                    <label for="wesley-guild" class="font-medium text-gray-700">Wesley Guild</label>
+                  </div>
+                </div>
               </fieldset>
               </div>
 
               <div class="col-span-6 sm:col-span-3">
               <fieldset class="space-y-2">
                 <label for="home-address" class="text-sm font-medium text-gray-700 hidden md:block">&nbsp;</label>
-                <legend class="sr-only">Notifications</legend>
+                <legend class="sr-only">Organisations</legend>
                 <div class="relative flex items-start">
                   <div class="flex items-center h-5">
-                    <input id="wesley-guild" aria-describedby="wesley-guild" name="wesley-guild" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" v-model.lazy="store.member.organisations.wesleyGuild" />
+                    <input id="womens-fellowship" aria-describedby="womens-fellowship" name="womens-fellowship" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" v-model.lazy="store.member.organisations.womensFellowship" />
                   </div>
                   <div class="ml-3 text-sm">
-                    <label for="wesley-guild" class="font-medium text-gray-700">Wesley Guild</label>
+                    <label for="womens-fellowship" class="font-medium text-gray-700">Women's Fellowship</label>
                   </div>
                 </div>
                 <div class="relative flex items-start">
@@ -161,7 +169,7 @@ const goBack = () => {
                 </div>
                 <div class="relative flex items-start">
                   <div class="flex items-center h-5">
-                    <input id="none" aria-describedby="none" name="none" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" v-model.lazy="store.member.organisations.notMember" />
+                    <input id="none" aria-describedby="none" name="none" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" v-model.lazy="store.member.organisations.notAmember" />
                   </div>
                   <div class="ml-3 text-sm">
                     <label for="none" class="font-medium text-gray-700">Not a member of an organisation</label>

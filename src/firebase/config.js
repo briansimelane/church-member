@@ -26,7 +26,7 @@ const storage = getStorage(firebaseApp);
 
 
 // collection ref
-const colRef = collection(db, 'members')
+const colRef = collection(db, 'members_new') //'members'
 
 // realtime collection data
 // const to be used in application
@@ -38,7 +38,7 @@ onSnapshot(colRef, (snapshot) => {
                     members.push({ ...doc.data(), id: doc.id })
                 })
         membersData.value = members
-                console.log('from Firebase config - data: ', members)
+                //console.log('from Firebase config - data: ', members)
 })
 
 export {
