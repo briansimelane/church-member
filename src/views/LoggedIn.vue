@@ -1,12 +1,12 @@
 <!--This example requires Tailwind CSS v2.0 + -->
 <script setup>
-import { membersData, db } from '../firebase/config'
+import { membersData, db, colRef } from '../firebase/config'
 import { useMemberStore } from '@/stores/member'
 import { useSelectedMemberStore } from '@/stores/selectedMember'
 import { ref, onMounted } from 'vue'
 import { getAuth, onAuthStateChanged, signOut } from '@firebase/auth';
 import { useRouter } from 'vue-router';
-import { doc, getDoc } from "firebase/firestore"
+import { doc, getDoc, query, orderBy } from "firebase/firestore"
 
 const members = membersData
 const store = useMemberStore()

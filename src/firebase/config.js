@@ -26,7 +26,7 @@ const storage = getStorage(firebaseApp);
 
 
 // collection ref
-const colRef = collection(db, 'members_new') //'members'
+const colRef = collection(db, 'methodist_members') //'members'
 
 // realtime collection data
 // const to be used in application
