@@ -16,6 +16,8 @@ const isLoggedIn = ref(false)
 
 let auth
 
+const numberOfmembers = ref(0)
+
 onMounted(() => {
     auth = getAuth()
     onAuthStateChanged(auth, (user) => {
@@ -96,6 +98,7 @@ const handleSignOut = () => {
                 <table class="min-w-full divide-y divide-gray-300">
                     <thead class="bg-gray-50">
                         <tr>
+                            <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6"></th>
                             <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Full name</th>
                             <th scope="col" class="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 lg:table-cell">Class number</th>
                             <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Society</th>
@@ -108,7 +111,8 @@ const handleSignOut = () => {
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-200 bg-white">
-                        <tr v-for="member in members" :key="member.id">
+                        <tr v-for="(member, index) in members" :key="member.id">
+                        <td class="w-full max-w-0 py-1 text-sm font-medium text-gray-900 sm:w-auto sm:max-w-none sm:pl-6">{{ index + 1 }}</td>
                         <td class="w-full max-w-0 py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:w-auto sm:max-w-none sm:pl-6">
      {{member.title}} {{ member.firstName }} {{ member.middleName }} '{{ member.knownAs }}' {{ member.surname }}
                             <dl class="font-normal lg:hidden">

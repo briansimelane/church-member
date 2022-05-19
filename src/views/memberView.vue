@@ -7,6 +7,7 @@ const currentMemberStore = useSelectedMemberStore().member
 const router = useRouter()
 
 
+
 </script>
 
 <template>

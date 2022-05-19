@@ -1,6 +1,6 @@
 // Imports from Firebase
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, onSnapshot, query, where } from 'firebase/firestore'
+import { getFirestore, collection, onSnapshot, query, where, orderBy } from 'firebase/firestore'
 import { getStorage } from "firebase/storage"
 import { getAuth } from "firebase/auth"
 import { ref } from 'vue'
@@ -28,11 +28,14 @@ const storage = getStorage(firebaseApp);
 // collection ref
 const colRef = collection(db, 'methodist_members') //'members'
 
+//queries
+const q = query(colRef, where("society", "==", "Moroka")) //, orderBy('surname', 'asc')
+
 // realtime collection data
 // const to be used in application
 const membersData = ref('')
 
-onSnapshot(colRef, (snapshot) => {
+onSnapshot(q, (snapshot) => {
     let members = []
                 snapshot.docs.forEach((doc) => {
                     members.push({ ...doc.data(), id: doc.id })
