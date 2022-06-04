@@ -29,7 +29,7 @@ const storage = getStorage(firebaseApp);
 const colRef = collection(db, 'methodist_members') //'members'
 
 //queries
-const q = query(colRef, where("society", "==", "Moroka")) //, orderBy('surname', 'asc')
+const q = query(colRef ) //, where("society", "==", "Moroka"), orderBy('surname', 'asc') 
 
 // realtime collection data
 // const to be used in application

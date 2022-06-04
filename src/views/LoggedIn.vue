@@ -94,17 +94,26 @@ const handleSignOut = () => {
               
             </div>
 
+<div class="-mx-4 mt-8 overflow-hidden shadow ring-1 ring-black ring-opacity-5 sm:-mx-6 md:mx-0 md:rounded-lg mb-5">
+    <table class="divide-y">
+        <thead class="bg-gray-50">
+            <tr>
+                <th><button class="m-2 p-2 rounded-lg bg-orange-200">Moroka</button></th>
+                <th><button>Moroka</button></th>
+                <th><button>Moroka</button></th>
+                <th><button>Moroka</button></th>
+            </tr>
+        </thead>
+    </table>
+</div>
             <div class="-mx-4 mt-8 overflow-hidden shadow ring-1 ring-black ring-opacity-5 sm:-mx-6 md:mx-0 md:rounded-lg mb-5">
                 <table class="min-w-full divide-y divide-gray-300">
                     <thead class="bg-gray-50">
                         <tr>
                             <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6"></th>
-                            <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Full name</th>
+                            <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Name</th>
                             <th scope="col" class="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 lg:table-cell">Class number</th>
                             <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Society</th>
-                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Pledge range</th>
-                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Donation range</th>
-                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Tithe range</th>
                             <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
                                 <span class="sr-only">Edit</span>
                             </th>
@@ -114,22 +123,17 @@ const handleSignOut = () => {
                         <tr v-for="(member, index) in members" :key="member.id">
                         <td class="w-full max-w-0 py-1 text-sm font-medium text-gray-900 sm:w-auto sm:max-w-none sm:pl-6">{{ index + 1 }}</td>
                         <td class="w-full max-w-0 py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:w-auto sm:max-w-none sm:pl-6">
-     {{member.title}} {{ member.firstName }} {{ member.middleName }} '{{ member.knownAs }}' {{ member.surname }}
+     {{member.title}} {{ member.knownAs }} {{ member.surname }}
                             <dl class="font-normal lg:hidden">
                                 <dt class="sr-only">Class number</dt>
                                 <dd class="mt-1 truncate text-gray-700" > Class: {{ member.classNumber }} </dd>
-                                <dt class="sr-only sm:hidden">Cell number</dt>
+                                <dt class="sr-only sm:hidden">Society</dt>
                                 <dd class="mt-1 truncate text-gray-500 sm:hidden" > {{ member.society }}</dd>
                             </dl>
                         </td>
                         <td class="hidden px-3 py-4 text-sm text-gray-500 lg:table-cell" > {{ member.classNumber }}</td>                       
                         <td class="px-3 py-4 text-sm text-gray-500">{{ member.society }}</td>
-                        <td class="px-3 py-4 text-sm text-gray-500 " v-if="member.plannedGiving">{{ member.plannedGiving.pledgeAmountRange }}</td>
-                        <td class="px-3 py-4 text-sm text-gray-500" v-else>No pledge data</td>
-                        <td class="px-3 py-4 text-sm text-gray-500 " v-if="member.plannedGiving">{{ member.plannedGiving.donationAmountRange }}</td>
-                        <td class="px-3 py-4 text-sm text-gray-500" v-else>No donation data</td>
-                        <td class="px-3 py-4 text-sm text-gray-500 " v-if="member.plannedGiving">{{ member.plannedGiving.titheAmountRange }}</td>
-                        <td class="px-3 py-4 text-sm text-gray-500" v-else>No tithe data</td>
+                        
                         <td class="py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
                             <button type="button" class="bg-gray-600 text-white hover:bg-gray-900 pt-1 pb-1 px-2 rounded-md">Edit<span class="sr-only">, {{ member.firstName }}</span></button>
                             <button type="button" class="bg-green-600 text-white hover:bg-green-900 mt-2 md:mt-0 md:ml-2 pt-1 pb-1 px-2 rounded-md" @click="handleView(member.id)"> View <span class="sr-only" >, {{ member.firstName }}</span></button >

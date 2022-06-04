@@ -30,7 +30,7 @@ store.$patch({ member: {
     navigationLog: 0.5  })
 
         if(circuit.alias == "Jabavu"){
-                societies.value = [{name: 'Dube'}, {name: 'Ikwezi'}, {name: "Jabulani"}, {name: "Jabavu 7am"}, {name: "Jabavu 11am"}, {name: "Molapo"}, {name: "Moroka"}, {name: "Nancefield"}]
+                societies.value = [{name: 'Dube'}, {name: 'Ikwezi'}, {name: "Jabulani"}, {name: "Jabavu 7am"}, {name: "Jabavu 11am"}, {name: "Moroka"}, {name: "Zondi"}]
             }
 
         if(circuit.alias == "JohnMasiza"){
