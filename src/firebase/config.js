@@ -29,7 +29,7 @@ const storage = getStorage(firebaseApp);
 const colRef = collection(db, 'methodist_members') //'members'
 
 //queries
-const q = query(colRef ) //, where("society", "==", "Moroka"), orderBy('surname', 'asc') 
+const q = query(colRef) //, where("society", "==", "Moroka"), orderBy('surname', 'asc') 
 
 // realtime collection data
 // const to be used in application
@@ -41,7 +41,7 @@ onSnapshot(q, (snapshot) => {
                     members.push({ ...doc.data(), id: doc.id })
                 })
         membersData.value = members
-                //console.log('from Firebase config - data: ', members)
+                console.log('from Firebase config - data: ', members)
 })
 
 export {
