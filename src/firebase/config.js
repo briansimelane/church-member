@@ -11,6 +11,7 @@ const firebaseConfig = {
     authDomain: "methodist-member.firebaseapp.com",
     projectId: "methodist-member",
     storageBucket: "methodist-member.appspot.com",
+    locationId:"us-central",
     messagingSenderId: "547441020682",
     appId: "1:547441020682:web:af828d51bc7d0fdfc974f3"
 }
