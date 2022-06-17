@@ -29,21 +29,113 @@ const storage = getStorage(firebaseApp);
 const colRef = collection(db, 'methodist_members') //'members'
 
 //queries
-const q = query(colRef) //, where("society", "==", "Moroka"), orderBy('surname', 'asc') 
+const qAll = query(colRef) //, where("society", "==", "Moroka"), orderBy('surname', 'asc') 
+const qDube = query(colRef, where("society", "==", "Dube"), orderBy('surname', 'asc'))
+const qIkwezi = query(colRef, where("society", "==", "Ikwezi"), orderBy('surname', 'asc'))
+const qJabavu7am = query(colRef, where("society", "==", "Jabavu 7am"), orderBy('surname', 'asc'))
+const qJabavu11am = query(colRef, where("society", "==", "Jabavu 11am"), orderBy('surname', 'asc'))
+const qJabulani = query(colRef, where("society", "==", "Jabulani"), orderBy('surname', 'asc'))
+const qMoroka = query(colRef, where("society", "==", "Moroka"), orderBy('surname', 'asc'))
+const qZondi = query(colRef, where("society", "==", "Zondi"), orderBy('surname', 'asc'))
 
 // realtime collection data
 // const to be used in application
 const membersData = ref('')
+const membersDube = ref('')
+const membersIkwezi = ref('')
+const membersJabavu7am = ref('')
+const membersJabavu11am = ref('')
+const membersJabulani = ref('')
+const membersMoroka = ref('')
+const membersZondi = ref('')
 
-onSnapshot(q, (snapshot) => {
+// update receipt tracker from database
+const membersDataReceived = ref(false)
+const membersDubeReceived = ref(false)
+const membersIkweziReceived = ref(false)
+const membersJabavu7amReceived = ref(false)
+const membersJabavu11amReceived = ref(false)
+const membersJabulaniReceived = ref(false)
+const membersMorokaReceived = ref(false)
+const membersZondiReceived = ref(false)
+
+onSnapshot(qAll, (snapshot) => {
     let members = []
                 snapshot.docs.forEach((doc) => {
                     members.push({ ...doc.data(), id: doc.id })
                 })
         membersData.value = members
                 console.log('from Firebase config - data: ', members)
+        //update receipt tag
+        membersDataReceived.value = true
+})
+
+onSnapshot(qDube, (snapshot) => {
+    let members = []
+                snapshot.docs.forEach((doc) => {
+                    members.push({ ...doc.data(), id: doc.id })
+                })
+        membersDube.value = members
+         // update receipt tag
+               
+})
+
+onSnapshot(qIkwezi, (snapshot) => {
+    let members = []
+                snapshot.docs.forEach((doc) => {
+                    members.push({ ...doc.data(), id: doc.id })
+                })
+        membersIkwezi.value = members
+                console.log('from Firebase config - data (Ikwezi): ', members)
+})
+
+onSnapshot(qJabavu7am, (snapshot) => {
+    let members = []
+                snapshot.docs.forEach((doc) => {
+                    members.push({ ...doc.data(), id: doc.id })
+                })
+        membersJabavu7am.value = members
+                console.log('from Firebase config - data (Jabavu 7am): ', members)
+})
+
+onSnapshot(qJabavu11am, (snapshot) => {
+    let members = []
+                snapshot.docs.forEach((doc) => {
+                    members.push({ ...doc.data(), id: doc.id })
+                })
+        membersJabavu11am.value = members
+                console.log('from Firebase config - data (Jabavu 11am): ', members)
+})
+
+onSnapshot(qJabulani, (snapshot) => {
+    let members = []
+                snapshot.docs.forEach((doc) => {
+                    members.push({ ...doc.data(), id: doc.id })
+                })
+        membersJabulani.value = members
+                console.log('from Firebase config - data (Jabulani): ', members)
+})
+
+onSnapshot(qMoroka, (snapshot) => {
+    let members = []
+                snapshot.docs.forEach((doc) => {
+                    members.push({ ...doc.data(), id: doc.id })
+                })
+        membersMoroka.value = members
+                console.log('from Firebase config - data (Moroka): ', members)
+})
+
+onSnapshot(qZondi, (snapshot) => {
+    let members = []
+                snapshot.docs.forEach((doc) => {
+                    members.push({ ...doc.data(), id: doc.id })
+                })
+        membersZondi.value = members
+                console.log('from Firebase config - data (Zondi): ', members)
 })
 
 export {
-    db, colRef, membersData, storage, auth
+    db, colRef, storage, auth, membersData, 
+    membersDube, membersIkwezi, membersJabavu7am, membersJabavu11am, membersJabulani, membersMoroka, membersZondi,
+    membersDataReceived
 }
