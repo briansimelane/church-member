@@ -197,7 +197,8 @@ const updateData = () => {
 
                 <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 rounded-lg"
                   v-if="showAdditionalData">
-                  <h1 class="px-3 pt-2 text-xl font-semibold text-gray-800">Members in the system</h1>
+                  <h1 class="px-3 pt-2 text-xl font-semibold text-gray-800 text-center md:text-left">Members in the
+                    system</h1>
                   <p class="mt-1 text-sm text-gray-600 italic text-center">Records as at: {{ currentDate }}</p>
 
                   <table class="min-w-full divide-y divide-gray-300">
@@ -218,7 +219,7 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ membersDubeAll.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        ((membersDubeAll.length / members.length)* 100).toFixed(2) }}
+                          ((membersDubeAll.length / members.length)* 100).toFixed(2) }}
                         </td>
                       </tr>
 
@@ -228,7 +229,7 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ membersIkweziAll.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        ((membersIkweziAll.length / members.length)* 100).toFixed(2) }}
+                          ((membersIkweziAll.length / members.length)* 100).toFixed(2) }}
                         </td>
                       </tr>
 
@@ -238,7 +239,7 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ membersJabavu7amAll.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        ((membersJabavu7amAll.length / members.length)* 100).toFixed(2) }}
+                          ((membersJabavu7amAll.length / members.length)* 100).toFixed(2) }}
                         </td>
                       </tr>
 
@@ -248,7 +249,7 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ membersJabavu11amAll.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        ((membersJabavu11amAll.length / members.length)* 100).toFixed(2) }}
+                          ((membersJabavu11amAll.length / members.length)* 100).toFixed(2) }}
                         </td>
                       </tr>
 
@@ -258,7 +259,7 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ membersJabulaniAll.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        ((membersJabulaniAll.length / members.length)* 100).toFixed(2) }}
+                          ((membersJabulaniAll.length / members.length)* 100).toFixed(2) }}
                         </td>
                       </tr>
 
@@ -268,7 +269,7 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ membersMorokaAll.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        ((membersMorokaAll.length / members.length)* 100).toFixed(2) }}
+                          ((membersMorokaAll.length / members.length)* 100).toFixed(2) }}
                         </td>
                       </tr>
 
@@ -278,7 +279,7 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ membersZondiAll.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        ((membersZondiAll.length / members.length)* 100).toFixed(2) }}
+                          ((membersZondiAll.length / members.length)* 100).toFixed(2) }}
                         </td>
                       </tr>
 
@@ -300,7 +301,8 @@ const updateData = () => {
 
                 <div v-if="showAdditionalData"
                   class="mt-5 overflow-hidden shadow ring-1 ring-black ring-opacity-5 rounded-lg">
-                  <h1 class="px-3 pt-2 text-xl font-semibold text-gray-800">Members by gender</h1>
+                  <h1 class="px-3 pt-2 text-xl font-semibold text-gray-800 text-center md:text-left">Members by gender
+                  </h1>
                   <p class="mt-1 text-sm text-gray-600 italic text-center">Records as at: {{ currentDate }}</p>
                   <table class="min-w-full divide-y divide-gray-300">
                     <thead class="bg-gray-50">
@@ -321,7 +323,7 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ calcMembersDubeFemale.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        calcMembersDubeMale.length }}
+                          calcMembersDubeMale.length }}
                         </td>
                       </tr>
 
@@ -331,7 +333,7 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ calcMembersIkweziFemale.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        calcMembersIkweziMale.length }}
+                          calcMembersIkweziMale.length }}
                         </td>
                       </tr>
 
@@ -341,7 +343,7 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ calcMembersJabavu7amFemale.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        calcMembersJabavu7amMale.length }}
+                          calcMembersJabavu7amMale.length }}
                         </td>
                       </tr>
 
@@ -351,7 +353,7 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ calcMembersJabavu11amFemale.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        calcMembersJabavu11amMale.length }}
+                          calcMembersJabavu11amMale.length }}
                         </td>
                       </tr>
 
@@ -361,7 +363,7 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ calcMembersJabulaniFemale.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        calcMembersJabulaniMale.length }}
+                          calcMembersJabulaniMale.length }}
                         </td>
                       </tr>
 
@@ -371,7 +373,7 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ calcMembersMorokaFemale.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        calcMembersMorokaMale.length }}
+                          calcMembersMorokaMale.length }}
                         </td>
                       </tr>
 
@@ -381,7 +383,7 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ calcMembersZondiFemale.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        calcMembersZondiMale.length }}
+                          calcMembersZondiMale.length }}
                         </td>
                       </tr>
 
@@ -391,7 +393,7 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm font-bold text-black text-center">
                           {{ calcMembersAllFemale.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm font-bold text-black text-center"> {{
-                        calcMembersAllMale.length }}
+                          calcMembersAllMale.length }}
                         </td>
                       </tr>
 
@@ -401,7 +403,8 @@ const updateData = () => {
 
                 <div v-if="showAdditionalData"
                   class="mt-5 overflow-hidden shadow ring-1 ring-black ring-opacity-5 rounded-lg">
-                  <h1 class="px-3 pt-2 text-xl font-semibold text-gray-800">Employment status: Full-time & Part-time
+                  <h1 class="px-3 pt-2 text-xl font-semibold text-gray-800 text-center md:text-left">Employment status:
+                    Full-time & Part-time
                   </h1>
                   <p class="mt-1 text-sm text-gray-600 italic text-center">Records as at: {{ currentDate }}</p>
                   <table class="min-w-full divide-y divide-gray-300">
@@ -423,9 +426,9 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ calcMembersDubeEmployed.length + calcMembersDubeEmployedPT.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        (((calcMembersDubeEmployed.length + calcMembersDubeEmployedPT.length) /
-                        membersDubeAll.length)*
-                        100).toFixed(2) }}
+                          (((calcMembersDubeEmployed.length + calcMembersDubeEmployedPT.length) /
+                          membersDubeAll.length)*
+                          100).toFixed(2) }}
                         </td>
                       </tr>
 
@@ -435,8 +438,8 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ calcMembersIkweziEmployed.length + calcMembersIkweziEmployedPT.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        (((calcMembersIkweziEmployed.length + calcMembersIkweziEmployedPT.length) /
-                        membersIkweziAll.length)* 100).toFixed(2) }}
+                          (((calcMembersIkweziEmployed.length + calcMembersIkweziEmployedPT.length) /
+                          membersIkweziAll.length)* 100).toFixed(2) }}
                         </td>
                       </tr>
 
@@ -446,8 +449,8 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ calcMembersJabavu7amEmployed.length + calcMembersJabavu7amEmployedPT.length}} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        (((calcMembersJabavu7amEmployed.length + calcMembersJabavu7amEmployedPT.length) /
-                        membersJabavu7amAll.length)* 100).toFixed(2) }}
+                          (((calcMembersJabavu7amEmployed.length + calcMembersJabavu7amEmployedPT.length) /
+                          membersJabavu7amAll.length)* 100).toFixed(2) }}
                         </td>
                       </tr>
 
@@ -457,8 +460,8 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ calcMembersJabavu11amEmployed.length + calcMembersJabavu11amEmployedPT.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        (((calcMembersJabavu11amEmployed.length + calcMembersJabavu11amEmployedPT.length) /
-                        membersJabavu11amAll.length)* 100).toFixed(2) }}
+                          (((calcMembersJabavu11amEmployed.length + calcMembersJabavu11amEmployedPT.length) /
+                          membersJabavu11amAll.length)* 100).toFixed(2) }}
                         </td>
                       </tr>
 
@@ -468,8 +471,8 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ calcMembersJabulaniEmployed.length + calcMembersJabulaniEmployedPT.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        (((calcMembersJabulaniEmployed.length + calcMembersJabulaniEmployedPT.length) /
-                        membersJabulaniAll.length)* 100).toFixed(2) }}
+                          (((calcMembersJabulaniEmployed.length + calcMembersJabulaniEmployedPT.length) /
+                          membersJabulaniAll.length)* 100).toFixed(2) }}
                         </td>
                       </tr>
 
@@ -479,8 +482,8 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ calcMembersMorokaEmployed.length + calcMembersMorokaEmployedPT.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        (((calcMembersMorokaEmployed.length + calcMembersMorokaEmployedPT.length) /
-                        membersMorokaAll.length)* 100).toFixed(2) }}
+                          (((calcMembersMorokaEmployed.length + calcMembersMorokaEmployedPT.length) /
+                          membersMorokaAll.length)* 100).toFixed(2) }}
                         </td>
                       </tr>
 
@@ -490,8 +493,8 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ calcMembersZondiEmployed.length + calcMembersZondiEmployedPT.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        (((calcMembersZondiEmployed.length + calcMembersZondiEmployedPT.length) /
-                        membersZondiAll.length)* 100).toFixed(2) }}
+                          (((calcMembersZondiEmployed.length + calcMembersZondiEmployedPT.length) /
+                          membersZondiAll.length)* 100).toFixed(2) }}
                         </td>
                       </tr>
 
@@ -501,8 +504,8 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm font-bold text-black text-center">
                           {{ calcMembersAllEmployed.length + calcMembersAllEmployedPT.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm font-bold text-black text-center"> {{
-                        (((calcMembersAllEmployed.length + calcMembersAllEmployedPT.length) / members.length)*
-                        100).toFixed(2) }}
+                          (((calcMembersAllEmployed.length + calcMembersAllEmployedPT.length) / members.length)*
+                          100).toFixed(2) }}
                         </td>
                       </tr>
 
@@ -512,7 +515,8 @@ const updateData = () => {
 
                 <div v-if="showAdditionalData"
                   class="mt-5 overflow-hidden shadow ring-1 ring-black ring-opacity-5 rounded-lg">
-                  <h1 class="px-3 pt-2 text-xl font-semibold text-gray-800">Employment status: Pensioners & Unemployed
+                  <h1 class="px-3 pt-2 text-xl font-semibold text-gray-800 text-center md:text-left">Employment status:
+                    Pensioners & Unemployed
                   </h1>
                   <p class="mt-1 text-sm text-gray-600 italic text-center">Records as at: {{ currentDate }}</p>
                   <table class="min-w-full divide-y divide-gray-300">
@@ -534,9 +538,9 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ calcMembersDubeUnemployed.length + calcMembersDubePensioner.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        (((calcMembersDubeUnemployed.length + calcMembersDubePensioner.length) /
-                        membersDubeAll.length)*
-                        100).toFixed(2) }}
+                          (((calcMembersDubeUnemployed.length + calcMembersDubePensioner.length) /
+                          membersDubeAll.length)*
+                          100).toFixed(2) }}
                         </td>
                       </tr>
 
@@ -546,8 +550,8 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ calcMembersIkweziUnemployed.length + calcMembersIkweziPensioner.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        (((calcMembersIkweziUnemployed.length + calcMembersIkweziPensioner.length) /
-                        membersIkweziAll.length)* 100).toFixed(2) }}
+                          (((calcMembersIkweziUnemployed.length + calcMembersIkweziPensioner.length) /
+                          membersIkweziAll.length)* 100).toFixed(2) }}
                         </td>
                       </tr>
 
@@ -557,8 +561,8 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ calcMembersJabavu7amUnemployed.length + calcMembersJabavu7amPensioner.length}} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        (((calcMembersJabavu7amUnemployed.length + calcMembersJabavu7amPensioner.length) /
-                        membersJabavu7amAll.length)* 100).toFixed(2) }}
+                          (((calcMembersJabavu7amUnemployed.length + calcMembersJabavu7amPensioner.length) /
+                          membersJabavu7amAll.length)* 100).toFixed(2) }}
                         </td>
                       </tr>
 
@@ -568,8 +572,8 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ calcMembersJabavu11amUnemployed.length + calcMembersJabavu11amPensioner.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        (((calcMembersJabavu11amUnemployed.length + calcMembersJabavu11amPensioner.length) /
-                        membersJabavu11amAll.length)* 100).toFixed(2) }}
+                          (((calcMembersJabavu11amUnemployed.length + calcMembersJabavu11amPensioner.length) /
+                          membersJabavu11amAll.length)* 100).toFixed(2) }}
                         </td>
                       </tr>
 
@@ -579,8 +583,8 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ calcMembersJabulaniUnemployed.length + calcMembersJabulaniPensioner.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        (((calcMembersJabulaniUnemployed.length + calcMembersJabulaniPensioner.length) /
-                        membersJabulaniAll.length)* 100).toFixed(2) }}
+                          (((calcMembersJabulaniUnemployed.length + calcMembersJabulaniPensioner.length) /
+                          membersJabulaniAll.length)* 100).toFixed(2) }}
                         </td>
                       </tr>
 
@@ -590,8 +594,8 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ calcMembersMorokaUnemployed.length + calcMembersMorokaPensioner.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        (((calcMembersMorokaUnemployed.length + calcMembersMorokaPensioner.length) /
-                        membersMorokaAll.length)* 100).toFixed(2) }}
+                          (((calcMembersMorokaUnemployed.length + calcMembersMorokaPensioner.length) /
+                          membersMorokaAll.length)* 100).toFixed(2) }}
                         </td>
                       </tr>
 
@@ -601,8 +605,8 @@ const updateData = () => {
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center">
                           {{ calcMembersZondiUnemployed.length + calcMembersZondiPensioner.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm text-gray-500 text-center"> {{
-                        (((calcMembersZondiUnemployed.length + calcMembersZondiPensioner.length) /
-                        membersZondiAll.length)* 100).toFixed(2) }}
+                          (((calcMembersZondiUnemployed.length + calcMembersZondiPensioner.length) /
+                          membersZondiAll.length)* 100).toFixed(2) }}
                         </td>
                       </tr>
 
@@ -613,7 +617,7 @@ const updateData = () => {
                           {{ calcMembersAllUnemployed.length + calcMembersAllPensioner.length }} </td>
                         <td class="whitespace-nowrap px-1 py-2 text-sm font-bold text-black text-center"> {{
                           (((calcMembersAllUnemployed.length + calcMembersAllPensioner.length ) / members.length)*
-                        100).toFixed(2) }}
+                          100).toFixed(2) }}
                         </td>
                       </tr>
 
@@ -621,7 +625,111 @@ const updateData = () => {
                   </table>
                 </div>
 
+
+
+
+
+
+
               </div>
+
+
+              <div v-if="showAdditionalData"
+                class="mt-5 overflow-hidden shadow ring-1 ring-black ring-opacity-5 rounded-lg">
+                <h1 class="px-3 pt-2 text-xl font-semibold text-gray-800 text-center md:text-left">Registered members:
+                  Dube Society
+                </h1>
+                <p class="mt-1 text-sm text-gray-600 italic text-center">Records as at: {{ currentDate }}</p>
+                <div class="min-w-full ">
+
+                  <span v-for="member in membersDubeAll" :key="member.id"
+                    class="bg-yellow-200 p-2 m-1 rounded-md inline-block">
+                    {{ member.title }} {{ member.firstName }} {{ member.surname }}
+                  </span>
+
+                </div>
+              </div>
+
+              <div v-if="showAdditionalData"
+                class="mt-5 overflow-hidden shadow ring-1 ring-black ring-opacity-5 rounded-lg">
+                <h1 class="px-3 pt-2 text-xl font-semibold text-gray-800 text-center md:text-left">Registered members:
+                  Ikwezi Society
+                </h1>
+                <p class="mt-1 text-sm text-gray-600 italic text-center">Records as at: {{ currentDate }}</p>
+                <div class="min-w-full ">
+
+                  <span v-for="member in membersIkweziAll" :key="member.id"
+                    class="bg-green-200 p-2 m-1 rounded-md inline-block">
+                    {{ member.title }} {{ member.firstName }} {{ member.surname }}
+                  </span>
+
+                </div>
+              </div>
+
+              <div v-if="showAdditionalData"
+                class="mt-5 overflow-hidden shadow ring-1 ring-black ring-opacity-5 rounded-lg">
+                <h1 class="px-3 pt-2 text-xl font-semibold text-gray-800 text-center md:text-left">Registered members:
+                  Jabavu 7am Society
+                </h1>
+                <p class="mt-1 text-sm text-gray-600 italic text-center">Records as at: {{ currentDate }}</p>
+                <div class="min-w-full ">
+
+                  <span v-for="member in membersJabavu7amAll" :key="member.id"
+                    class="bg-gray-200 p-2 m-1 rounded-md inline-block">
+                    {{ member.title }} {{ member.firstName }} {{ member.surname }}
+                  </span>
+
+                </div>
+              </div>
+
+              <div v-if="showAdditionalData"
+                class="mt-5 overflow-hidden shadow ring-1 ring-black ring-opacity-5 rounded-lg">
+                <h1 class="px-3 pt-2 text-xl font-semibold text-gray-800 text-center md:text-left">Registered members:
+                  Jabavu 11am Society
+                </h1>
+                <p class="mt-1 text-sm text-gray-600 italic text-center">Records as at: {{ currentDate }}</p>
+                <div class="min-w-full ">
+
+                  <span v-for="member in membersJabavu11amAll" :key="member.id"
+                    class="bg-pink-200 p-2 m-1 rounded-md inline-block">
+                    {{ member.title }} {{ member.firstName }} {{ member.surname }}
+                  </span>
+
+                </div>
+              </div>
+
+              <div v-if="showAdditionalData"
+                class="mt-5 overflow-hidden shadow ring-1 ring-black ring-opacity-5 rounded-lg">
+                <h1 class="px-3 pt-2 text-xl font-semibold text-gray-800 text-center md:text-left">Registered members:
+                  Moroka Society
+                </h1>
+                <p class="mt-1 text-sm text-gray-600 italic text-center">Records as at: {{ currentDate }}</p>
+                <div class="min-w-full flex-wrap">
+
+                  <span v-for="member in membersMorokaAll" :key="member.id"
+                    class="bg-lime-200 p-2 m-1 rounded-md inline-block">
+                    {{ member.title }} {{ member.firstName }} {{ member.surname }}
+                  </span>
+
+                </div>
+              </div>
+
+              <div v-if="showAdditionalData"
+                class="mt-5 overflow-hidden shadow ring-1 ring-black ring-opacity-5 rounded-lg">
+                <h1 class="px-3 pt-2 text-xl font-semibold text-gray-800 text-center md:text-left">Registered members:
+                  Zondi Society
+                </h1>
+                <p class="mt-1 text-sm text-gray-600 italic text-center">Records as at: {{ currentDate }}</p>
+                <div class="min-w-full ">
+
+                  <span v-for="member in membersZondiAll" :key="member.id"
+                    class="bg-blue-200 p-2 m-1 rounded-md inline-block">
+                    {{ member.title }} {{ member.firstName }} {{ member.surname }}
+                  </span>
+
+                </div>
+              </div>
+
             </div>
           </div>
 
